@@ -1,0 +1,82 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    cursor: url('/heart-cursor.png'), auto; /* Updated path for the heart-shaped cursor image */
+}
+
+#yinYangNav, #yinYangNav * {
+    cursor: url('/heart-cursor.png'), auto; /* Apply the heart cursor to all elements inside yinYangNav */
+}
+
+#content, #content * {
+    cursor: url('/heart-cursor.png'), auto; /* Apply the heart cursor to all elements inside content */
+}
+
+#yinYangNav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;  /* 50% of the viewport width */
+    height: 50vh; /* 50% of the viewport height */
+    /* background: url('yin-yang.svg') no-repeat center center; */ /* Commented out */
+    background-size: contain; /* Ensures the background image fits within the element without cropping */
+    cursor: pointer;
+}
+
+
+#content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.tile {
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin: 1.5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    background: pink;
+}
+
+.animal {
+    background: lightgreen;
+}
+
+.verbatim {
+    background: lightblue;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.button, .button:hover {
+    cursor: url('/heart-cursor.png'), auto; /* Ensure the heart cursor is used for buttons */
+}
+
+.st0 {
+    fill: transparent;
+    pointer-events: all; /* This ensures that the elements are clickable */
+  }
